@@ -7,6 +7,7 @@ import { EmployerComponent } from './components/employer/employer.component';
 import { EmployerService } from './services/employer.service';
 //HttpClientModule to make http request from server api
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [EmployerService],
   bootstrap: [EmployerComponent]

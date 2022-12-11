@@ -13,11 +13,11 @@
         <h2>Employer Details</h2>
         <fieldset class="p-2">
             <label class="col-2">Name: *</label>
-            <input required />
+            <input [(ngModel)]="name" required />
         </fieldset>
         <fieldset class="p-2">
             <label class="col-2">Region: *</label>
-            <select required>
+            <select [(ngModel)]="region" required>
                 <option>Barrie</option>
                 <option>Angus</option>
                 <option>Ottawa</option>
@@ -27,10 +27,10 @@
         </fieldset>
         <fieldset class="p-2">
             <label class="col-2">Description: *</label>
-            <textarea required></textarea>
+            <textarea [(ngModel)]="description" required></textarea>
         </fieldset>
         <div class="offset-2">
-            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary" (click)="addEmployer()">Save</button>
         </div>
     </section>
 </div>
