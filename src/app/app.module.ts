@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { EmployerComponent } from './components/employer/employer.component';
+//our service which talks to the server API
+import { EmployerService } from './services/employer.service';
+//HttpClientModule to make http request from server api
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +14,10 @@ import { EmployerComponent } from './components/employer/employer.component';
     EmployerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployerService],
   bootstrap: [EmployerComponent]
 })
 export class AppModule { }

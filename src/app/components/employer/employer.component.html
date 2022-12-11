@@ -1,1 +1,36 @@
-<p>I Need A Job</p>
+<h1>I Need A Job</h1>
+<div class="row">
+    <section class="col-6">
+        <h2>Employer List</h2>
+        <ul class="list-group">
+            <li *ngFor="let employer of employers" class="list-group-item">
+                <span class="list-group-item active">{{employer.name}}</span>
+                {{employer.region}}
+            </li>
+        </ul>
+    </section>
+    <section class="col-6">
+        <h2>Employer Details</h2>
+        <fieldset class="p-2">
+            <label class="col-2">Name: *</label>
+            <input required />
+        </fieldset>
+        <fieldset class="p-2">
+            <label class="col-2">Region: *</label>
+            <select required>
+                <option>Barrie</option>
+                <option>Angus</option>
+                <option>Ottawa</option>
+                <option>Newmarket</option>
+                <option>Toronto</option>
+            </select>
+        </fieldset>
+        <fieldset class="p-2">
+            <label class="col-2">Description: *</label>
+            <textarea required></textarea>
+        </fieldset>
+        <div class="offset-2">
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </section>
+</div>
