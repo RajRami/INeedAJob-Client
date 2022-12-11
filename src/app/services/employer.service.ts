@@ -23,12 +23,22 @@ export class EmployerService {
   constructor(private http: HttpClient) { }
 
   // get all from api
-  getEmployers() {
+  getEmployers(){
     return this.http.get(`${this.serverUrl}/api/employers`)
   }
 
   //post new employer object to an api
   addEmployer(employer: any){
     return this.http.post(`${this.serverUrl}/api/employers`, employer)
+  }
+
+  //delete
+  deleteEmployer(_id: string){
+    return this.http.delete(`${this.serverUrl}/api/employers/${_id}`)
+  }
+
+  //update
+  updateEmployer(employer: any){
+    return this.http.put(`${this.serverUrl}/api/employers/${employer._id}`, employer)
   }
 }
