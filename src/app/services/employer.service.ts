@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 // needed to fetch the api domain
 // we modified angular.json to replace this w/environment.prod.ts in production build
+// modifide angular.json to replace it with environment.prod.ts in production mode
 import { environment } from 'src/environments/environment';
 
 // HttpHeaders needed for POST and PUT requests
